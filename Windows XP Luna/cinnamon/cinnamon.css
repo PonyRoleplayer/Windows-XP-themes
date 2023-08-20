@@ -138,10 +138,14 @@ StScrollBar StButton#vhandle:hover {
 /* Cinnamon 3.2 fix */
 .popup-menu,
 .menu {
-  border: solid 4px black;
-  border-image: url('popupmenu.png') 8 8 8 8;
+
+  border: solid 1px #aca899;
+  /*border-image: url('popupmenu.png') 8 8 8 8;*/
+  background-color: rgba(255, 255, 255, 1);
+
   color: #000;
   font-size: 9pt;
+  box-shadow: 8px 8px 2px -5px rgba(50,50,45,0.50);
 }
 .popup-submenu-menu-item:open {
   background-color: #4c4c4c;
@@ -595,7 +599,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .desklet-drag-placeholder {
-  background-color: rgba(57,156,238,.31);
+    background-color: solid rgba(0, 51, 153, 0.8);
 }
 
 
@@ -737,7 +741,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .calendar-month-label {
-  color: #cccccc;
+  color: #000000;
   font-size: 7.5pt;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -837,6 +841,11 @@ StScrollBar StButton#vhandle:hover {
   background-color: rgba(57,156,238,1);
   border-radius: 2px;
 }
+
+/*.calendar-today-home-button {
+    color: rgba(0,0,0,1);
+    font
+}*/
 
 .calendar-other-month-day {
   color: transparent;
@@ -1756,6 +1765,7 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   font-weight: normal;
   border-image: none;
   transition-duration: 100;
+  /*min-width: 160px;*/
 }
 
 .grouped-window-list-item-box:hover {
@@ -1811,8 +1821,10 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
 }
 
 .grouped-window-list-thumbnail-menu {
-  spacing: 6px;
-  padding: 6px 12px 12px 12px;
+	spacing: 6px;
+  	padding: 6px 12px 12px 12px;
+    border-image: url("menu-bottom.png") 6;
+    color: #ffffff;
 }
 
 .grouped-window-list-thumbnail-menu > StBoxLayout {
@@ -2026,9 +2038,13 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   background: rgba(0,0,0,0.5);
 }
 
+StBoxLayout.xapp-status-cinnamon-org-applet {
+    padding-left: 4px;
+}
+
 .applet-box {
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 1px;
+  padding-right: 1px;
   transition-duration: 300;
 }
 .applet-box:hover {
@@ -2298,3 +2314,68 @@ The colour parameters are red, green, blue, and transparency or a name */
   border-radius: 4px;
   border: 2px solid #f1f1f1;
 }
+
+/* ===================================================================
+ * Snap/Tile Chrome (windowManager.js)
+ * ===================================================================*/
+ .tile-preview,
+ .tile-hud {
+     background-color: rgba(100, 135, 220, 0.5);
+     border: 3px solid rgba(0, 51, 153, 0.8);
+ }
+ 
+ .tile-preview.snap,
+ .tile-hud.snap {
+     background-color: rgba(0, 51, 153, 0.8);
+     
+ }
+ 
+ .tile-hud:top {
+     border-top-width: 0px;
+     border-radius: 0px 0px 8px 8px;
+ }
+ 
+ .tile-hud:bottom {
+     border-bottom-width: 0px;
+     border-radius: 8px 8px 0px 0px;
+ }
+ 
+ .tile-hud:left {
+     border-left-width: 0px;
+     border-radius: 0px 8px 8px 0px;
+ }
+ 
+ .tile-hud:right {
+     border-right-width: 0px;
+     border-radius: 8px 0px 0px 8px;
+ }
+ 
+ .tile-hud:top-left {
+     border-top-width: 0px;
+     border-left-width: 0px;
+     border-radius: 0px 0px 8px 0px;
+ }
+ 
+ .tile-hud:top-right {
+     border-top-width: 0px;
+     border-right-width: 0px;
+     border-radius: 0px 0px 0px 8px;
+ }
+ 
+ .tile-hud:bottom-left {
+     border-bottom-width: 0px;
+     border-left-width: 0px;
+     border-radius: 0px 8px 0px 0px;
+ }
+ 
+ .tile-hud:bottom-right {
+     border-bottom-width: 0px;
+     border-right-width: 0px;
+     border-radius: 8px 0px 0px 0px;
+ }
+ 
+ /* Start menu */
+
+ .menu-cinnamon-org-applet {
+    padding-left: 8px;
+ }
