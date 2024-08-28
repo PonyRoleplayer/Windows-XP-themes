@@ -1,3 +1,22 @@
+headerbar separator {
+    -GtkWidget-window-dragging: true;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: #d4d2c2;
+}
+
+headerbar separator:backdrop {
+    background-color: #dad8c8;
+}
+
+headerbar button separator {
+    border-color: #d4d2c2;
+}
+
+headerbar button separator:backdrop {
+    border-color: #dad8c8;
+}
+
 headerbar {
     color: #000000;
     background-color: #ECE9D8;
@@ -10,6 +29,80 @@ headerbar:backdrop {
     color: #000000;
     background-color: #ECE9D8;
     background-image: url("assets/titlebar-unfocused-middle.png");
+}
+
+headerbar button.suggested-action {
+    box-shadow: inset 0 0 2px 1px #95b4e8;
+}
+
+headerbar.selection-mode,
+toolbar.selection-mode {
+    border-color: #a1c2e9;
+    color: #FFFFFF;
+    background-color: #a1c2e9;
+}
+
+headerbar.selection-mode:backdrop,
+toolbar.selection-mode:backdrop {
+    border-color: #082950;
+    color: #000000;
+    background-color: #082950;
+}
+
+headerbar.selection-mode button,
+toolbar.selection-mode button {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #b9d1ef;
+    border-radius: 2px;
+    color: #1052a1;
+    background-color: #b9d1ef;
+}
+
+headerbar.selection-mode button:hover,
+toolbar.selection-mode button:hover {
+    border-color: #c4d9f2;
+    background-color: #c4d9f2;
+}
+
+headerbar.selection-mode button:active,
+headerbar.selection-mode button:checked,
+toolbar.selection-mode button:active,
+toolbar.selection-mode button:checked {
+    border-color: #7eabe1;
+    background-color: #7eabe1;
+}
+
+headerbar.selection-mode button:active:backdrop,
+headerbar.selection-mode button:checked:backdrop,
+toolbar.selection-mode button:active:backdrop,
+toolbar.selection-mode button:checked:backdrop {
+    border-color: #0b386f;
+    background-color: #0b386f;
+}
+
+headerbar.selection-mode button:backdrop,
+toolbar.selection-mode button:backdrop {
+    border-color: #051a32;
+    color: #0e478d;
+    background-color: #051a32;
+}
+
+headerbar.selection-mode button.suggested-action,
+toolbar.selection-mode button.suggested-action {
+    box-shadow: inset 0 0 2px 1px #95b4e8;
+}
+
+headerbar.selection-mode .selection-menu button,
+toolbar.selection-mode .selection-menu button {
+    border-style: none;
+    background-color: transparent;
+    color: #1e5392;
+}
+
+headerbar.selection-mode .selection-menu button .dim-label,
+toolbar.selection-mode .selection-menu button .dim-label {
+    color: #21497a;
 }
 
 separator:first-child+headerbar,
@@ -239,25 +332,25 @@ headerbar .titlebutton.maximize:backdrop:active {
 
 headerbar button.image-button,
 headerbar button.title-button {
-    background: url("/home/shade/git/Windows-XP-theme/Windows XP Luna/gtk-3.0/assets/image-button-normal.png") 100% 100%;
+    background: url("assets/image-button-normal.png") 100% 100%;
 }
 
 headerbar button.image-button:hover,
 headerbar button.title-button:hover {
-    background: url("/home/shade/git/Windows-XP-theme/Windows XP Luna/gtk-3.0/assets/image-button-hover.png") 100% 100%;
+    background: url("assets/image-button-hover.png") 100% 100%;
 }
 
 headerbar button.image-button:active,
 headerbar button.title-button:active {
-    background: url("/home/shade/git/Windows-XP-theme/Windows XP Luna/gtk-3.0/assets/image-button-pressed.png") 100% 100%;
+    background: url("assets/image-button-pressed.png") 100% 100%;
 }
 
 headerbar button.image-button:backdrop headerbar button.title-button:backdrop {
-    background: url("/home/shade/git/Windows-XP-theme/Windows XP Luna/gtk-3.0/assets/image-button-normal-backdrop.png") 100% 100%;
+    background: url("assets/image-button-normal-backdrop.png") 100% 100%;
 }
 
 headerbar button.image-button:hover:backdrop headerbar button.title-button:hover:backdrop {
-    background: url("/home/shade/git/Windows-XP-theme/Windows XP Luna/gtk-3.0/assets/image-button-hover.png") 100% 100%;
+    background: url("assets/image-button-hover.png") 100% 100%;
 }
 
 headerbar button.image-button,
