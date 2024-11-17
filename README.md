@@ -5,32 +5,35 @@ Most visual styles from Windows XP brought back to life for Linux desktops
 
 ### Previews
 Embedded
-![embedded](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Embedded%20(3).png)
+
 
 Luna
-![luna](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Luna%20(2).png)
+![LUNA](https://github.com/user-attachments/assets/8f3f9557-8e88-49f7-8e06-7f81186d79cc)
+
 
 Homestead
-![olive](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Homestead%20(3).png)
+![HOMESTEAD](https://github.com/user-attachments/assets/077c7c80-9362-4d98-aac8-4a874cf02da1)
+
 
 Metallic
-![metal](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Metallic%20(2).png)
+![METALLIC](https://github.com/user-attachments/assets/c69a1e10-a4fe-4173-a7f1-01df917ab387)
+
 
 Royale
-![royale](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Royale%20(2).png)
+![ROYALE](https://github.com/user-attachments/assets/d5a99155-4a4d-488f-ad04-d65497cd856d)
+
 
 Royale Dark (Noir)
-![royale-dark](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Royale%20Dark%20(2).png)
+![ROYALE_DARK](https://github.com/user-attachments/assets/a401a245-aeea-44ac-9f9f-a386571bb233)
+
 
 Zune
-![zune](https://github.com/B00merang-Project/gallery/raw/master/Windows%20XP%20Zune%20(2).png)
+![ZUNE](https://github.com/user-attachments/assets/7f9fc65b-e9e6-49a4-b518-0d8d071ad44b)
+
 
 ### Supported platforms
-- Any GTK-based desktop
 - Cinnamon
-- Gnome
-- MATE
-- Xfce (partial)
+I have absolutely no idea if it works anywhere else because I didn't test it.
 
 ### Manual installation
 Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
