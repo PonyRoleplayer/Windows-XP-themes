@@ -1890,12 +1890,12 @@ headerbar {
     padding-left: 12px;
     padding-right: 12px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: white;
     padding: 0 12px;
-    text-shadow: 1px 1px black; }
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
     headerbar .title:backdrop {
       text-shadow: none;
-      color: rgba(255, 255, 255, 0.3); }
+      color: white; }
   headerbar .subtitle {
     font-size: smaller;
     padding-left: 12px;
@@ -1912,8 +1912,8 @@ headerbar {
   headerbar .image-button:backdrop:hover
   .image-button:disabled,
   headerbar .image-button:checked,
-  headerbar .image-button:active:disabled
-  .image-button:checked:disabled {
+  headerbar .image-button:active:disabled,
+  headerbar .image-button:checked:disabled {
     background-color: transparent;
     border-style: none;
     background-size: 21px 21px;
