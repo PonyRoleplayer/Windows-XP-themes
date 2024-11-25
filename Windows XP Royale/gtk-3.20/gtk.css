@@ -1923,8 +1923,11 @@ headerbar {
     background-repeat: no-repeat;
     outline-color: transparent; }
   headerbar .image-button {
+    min-width: 21px;
+    min-height: 21px;
     background: no-repeat url("assets/button-bg-normal.png") 100% 100%;
-    background-position: center; }
+    background-position: center;
+    box-shadow: none; }
     headerbar .image-button:hover, headerbar .image-button:active, headerbar .image-button:focus {
       box-shadow: none;
       border-style: none;
@@ -1946,58 +1949,61 @@ headerbar {
     box-shadow: none;
     color: transparent;
     background-color: transparent;
-    padding: 3px 2px 2px 3px;
-    margin: 3px 0px 0px -4px;
+    min-width: 21px;
+    min-height: 21px;
+    padding: 2px 0px 0px 0px;
+    margin: 0px 0px 0px -4px;
     background-size: 21px 21px;
+    background-repeat: no-repeat;
     background-position: center; }
   headerbar .titlebutton.close {
-    background: url("assets/close-normal.png") 100% 100%; }
+    background: no-repeat url("assets/close-normal.png") 100% 100%; }
     headerbar .titlebutton.close:hover {
-      background: url("assets/close-hover.png") 100% 100%; }
+      background: no-repeat url("assets/close-hover.png") 100% 100%; }
     headerbar .titlebutton.close:active {
-      background: url("assets/close-active.png") 100% 100%; }
+      background: no-repeat url("assets/close-active.png") 100% 100%; }
     headerbar .titlebutton.close:backdrop {
-      background: url("assets/close-backdrop.png") 100% 100%; }
+      background: no-repeat url("assets/close-backdrop.png") 100% 100%; }
       headerbar .titlebutton.close:backdrop:hover {
-        background: url("assets/close-backdrop-hover.png") 100% 100%; }
+        background: no-repeat url("assets/close-backdrop-hover.png") 100% 100%; }
       headerbar .titlebutton.close:backdrop:active {
-        background: url("assets/close-active.png") 100% 100%; }
+        background: no-repeat url("assets/close-active.png") 100% 100%; }
   headerbar .titlebutton.minimize {
-    background: url("assets/minimize-normal.png") 100% 100%; }
+    background: no-repeat url("assets/minimize-normal.png") 100% 100%; }
     headerbar .titlebutton.minimize:hover {
-      background: url("assets/minimize-hover.png") 100% 100%; }
+      background: no-repeat url("assets/minimize-hover.png") 100% 100%; }
     headerbar .titlebutton.minimize:active {
-      background: url("assets/minimize-active.png") 100% 100%; }
+      background: no-repeat url("assets/minimize-active.png") 100% 100%; }
     headerbar .titlebutton.minimize:backdrop {
-      background: url("assets/minimize-backdrop.png") 100% 100%; }
+      background: no-repeat url("assets/minimize-backdrop.png") 100% 100%; }
       headerbar .titlebutton.minimize:backdrop:hover {
-        background: url("assets/minimize-backdrop-hover.png") 100% 100%; }
+        background: no-repeat url("assets/minimize-backdrop-hover.png") 100% 100%; }
       headerbar .titlebutton.minimize:backdrop:active {
-        background: url("assets/minimize-active.png") 100% 100%; }
+        background: no-repeat url("assets/minimize-active.png") 100% 100%; }
   headerbar .titlebutton.maximize {
-    background: url("assets/maximize-normal.png") 100% 100%; }
+    background: no-repeat url("assets/maximize-normal.png") 100% 100%; }
     headerbar .titlebutton.maximize:hover {
-      background: url("assets/maximize-hover.png") 100% 100%; }
+      background: no-repeat url("assets/maximize-hover.png") 100% 100%; }
     headerbar .titlebutton.maximize:active {
-      background: url("assets/maximize-active.png") 100% 100%; }
+      background: no-repeat url("assets/maximize-active.png") 100% 100%; }
     headerbar .titlebutton.maximize:backdrop {
-      background: url("assets/maximize-backdrop.png") 100% 100%; }
+      background: no-repeat url("assets/maximize-backdrop.png") 100% 100%; }
       headerbar .titlebutton.maximize:backdrop:hover {
-        background: url("assets/maximize-backdrop-hover.png") 100% 100%; }
+        background: no-repeat url("assets/maximize-backdrop-hover.png") 100% 100%; }
       headerbar .titlebutton.maximize:backdrop:active {
-        background: url("assets/maximize-active.png") 100% 100%; }
+        background: no-repeat url("assets/maximize-active.png") 100% 100%; }
   .maximized headerbar .titlebutton.maximize {
-    background: url("assets/restore-normal.png") 100% 100%; }
+    background: no-repeat url("assets/restore-normal.png") 100% 100%; }
     .maximized headerbar .titlebutton.maximize:hover {
-      background: url("assets/restore-hover.png") 100% 100%; }
+      background: no-repeat url("assets/restore-hover.png") 100% 100%; }
     .maximized headerbar .titlebutton.maximize:active {
-      background: url("assets/restore-active.png") 100% 100%; }
+      background: no-repeat url("assets/restore-active.png") 100% 100%; }
     .maximized headerbar .titlebutton.maximize:backdrop {
-      background: url("assets/restore-backdrop.png") 100% 100%; }
+      background: no-repeat url("assets/restore-backdrop.png") 100% 100%; }
       .maximized headerbar .titlebutton.maximize:backdrop:hover {
-        background: url("assets/restore-backdrop-hover.png") 100% 100%; }
+        background: no-repeat url("assets/restore-backdrop-hover.png") 100% 100%; }
       .maximized headerbar .titlebutton.maximize:backdrop:active {
-        background: url("assets/restore-active.png") 100% 100%; }
+        background: no-repeat url("assets/restore-active.png") 100% 100%; }
 
 toolbar {
   padding: 4px;

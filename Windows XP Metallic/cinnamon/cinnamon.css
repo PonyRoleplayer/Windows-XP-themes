@@ -655,23 +655,55 @@ StScrollBar StButton#vhandle:hover {
 /* ===================================================================
  * Date applet (calendar@cinnamon.org/calendar.js)
  * ===================================================================*/
+.calendar-main-box {
+  /*& StBoxLayout:last-child {
+      border: 1px solid #002d96;
+      background-gradient-direction: vertical;
+      background-gradient-start: #5987d6;
+      background-gradient-end: #033894;
+  }*/ }
+
+.calendar-background {
+  border-radius: 6px;
+  border-width: 1px;
+  border-color: white;
+  color: white;
+  background-gradient-direction: vertical;
+  background-gradient-start: #1d4d9c;
+  background-gradient-end: #5c89c9; }
+  .calendar-background CinnamonGenericContainer.popup-menu-item:last-child {
+    color: white; }
+    .calendar-background CinnamonGenericContainer.popup-menu-item:last-child:hover {
+      background-gradient-direction: vertical;
+      background-gradient-start: #A4D07B;
+      background-gradient-end: #68A941; }
+  .calendar-background StDrawingArea.popup-separator-menu-item {
+    background-color: white;
+    height: 1px; }
+
 .calendar-cinnamon-org-applet .applet-label {
   color: black; }
 
 .calendar {
   spacing-rows: 0px;
-  spacing-columns: 0px; }
+  spacing-columns: 0px;
+  border-width: 1px;
+  border-color: #002d96;
+  margin: 0px;
+  padding: 2px;
+  background-color: white; }
+  .calendar StBoxLayout {
+    background-color: #9ebef5; }
 
 .calendar-events-main-box {
-  margin-right: 10px;
+  margin: 0px 10px 0px 0px;
   height: 300px;
   min-width: 350px;
   padding: 10px;
-  border: 1px solid #5a5a5a;
-  border-radius: 4px;
-  background-gradient-direction: vertical;
-  background-gradient-start: rgba(80, 80, 80, 0.7);
-  background-gradient-end: rgba(60, 60, 60, 0.7); }
+  border: 1px solid #002d96;
+  background-color: #fff4bc; }
+  .calendar-events-main-box .separator {
+    background: unset; }
 
 .calendar-events-no-events-button {
   color: #cccccc;
@@ -685,60 +717,56 @@ StScrollBar StButton#vhandle:hover {
   border-radius: 4px; }
 
 .calendar-events-no-events-icon {
-  color: #cccccc; }
+  color: black; }
 
 .calendar-events-no-events-label {
   font-weight: bold;
-  text-align: center; }
+  text-align: center;
+  color: black; }
 
 .calendar-events-date-label {
   padding: .1em .1em .5em .1em;
   font-weight: bold;
-  text-align: center; }
-
-.calendar-events-main-box .separator {
-  background: unset; }
+  text-align: center;
+  color: black; }
 
 .calendar-events-event-container {
   padding: 0; }
 
 .calendar-event-button {
-  margin: 7px; }
-
-.calendar-event-button:hover {
-  background-gradient-direction: vertical;
-  background-gradient-start: rgba(90, 90, 90, 0.5);
-  background-gradient-end: rgba(70, 70, 70, 0.5);
-  box-shadow: inset 0px 0px 1px 1px #787878;
-  border-radius: 4px; }
+  margin: 7px;
+  background-color: white;
+  border: 1px solid black; }
+  .calendar-event-button:hover {
+    box-shadow: inset 0px 0px 1px 1px #787878; }
 
 .calendar-event-row-content {
   padding: 7px;
   margin: 2px 7px 2px 7px; }
 
 .calendar-event-time-past {
-  color: rgba(255, 255, 255, 0.2);
+  color: grey;
   font-weight: bold;
   text-align: left;
   margin-bottom: .2em; }
 
 .calendar-event-time-present {
-  color: #white;
+  color: black;
   font-weight: bold;
   text-align: left;
   margin-bottom: .2em; }
 
 .calendar-event-time-present:all-day {
-  color: rgba(0, 255, 0, 0.6); }
+  color: rgba(0, 170, 0, 0.6); }
 
 .calendar-event-time-future {
-  color: rgba(255, 255, 255, 0.8);
+  color: black;
   font-weight: bold;
   text-align: left;
   margin-bottom: .2em; }
 
 .calendar-event-summary {
-  color: #white;
+  color: black;
   text-align: left;
   width: 200px;
   padding-bottom: 2px; }
@@ -764,7 +792,7 @@ StScrollBar StButton#vhandle:hover {
   border-radius: 4px 0 0 4px; }
 
 .calendar-month-label {
-  color: #cccccc;
+  color: black;
   font-size: 1em;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -773,58 +801,55 @@ StScrollBar StButton#vhandle:hover {
 .calendar-change-month-back {
   width: 18px;
   height: 12px;
-  background-image: url("calendar-arrow-left.svg");
+  background-image: url("assets/calendar-arrow-left.svg");
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0); }
-
-.calendar-change-month-back:rtl {
-  background-image: url("calendar-arrow-right.svg"); }
-
-.calendar-change-month-back:hover {
-  background-color: #505050;
-  border: 1px solid #787878; }
-
-.calendar-change-month-back:active {
-  background-color: #323232; }
+  border: none; }
+  .calendar-change-month-back:rtl {
+    background-image: url("assets/calendar-arrow-right.svg"); }
+  .calendar-change-month-back:hover {
+    background-color: #B5E089;
+    border: none; }
+  .calendar-change-month-back:active {
+    background-color: #79B94D;
+    border: none; }
 
 .calendar-change-month-forward {
   width: 18px;
   height: 12px;
-  background-image: url("calendar-arrow-right.svg");
+  background-image: url("assets/calendar-arrow-right.svg");
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0); }
-
-.calendar-change-month-forward:rtl {
-  background-image: url("calendar-arrow-left.svg"); }
-
-.calendar-change-month-forward:hover {
-  background-color: #505050;
-  border: 1px solid #787878; }
-
-.calendar-change-month-forward:active {
-  background-color: #323232; }
+  border: none; }
+  .calendar-change-month-forward:rtl {
+    background-image: url("assets/calendar-arrow-left.svg"); }
+  .calendar-change-month-forward:hover {
+    background-color: #B5E089;
+    border: none; }
+  .calendar-change-month-forward:active {
+    background-color: #79B94D;
+    border: none; }
 
 .calendar-today-home-button,
 .calendar-today-home-button-enabled {
-  padding: 7px; }
+  padding: 7px;
+  margin-top: 15px;
+  color: #002d96; }
 
 .calendar-today-home-button-enabled:hover {
   padding: 7px;
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(90, 90, 90, 0.5);
-  background-gradient-end: rgba(70, 70, 70, 0.5);
-  box-shadow: inset 0px 0px 1px 1px #787878;
+  background-gradient-start: rgba(181, 224, 137, 0.8);
+  background-gradient-end: rgba(121, 185, 77, 0.8);
   border-radius: 4px; }
 
 .calendar-today-day-label {
-  color: #cccccc;
+  color: white;
   font-size: 1.75em;
   font-weight: bold;
   text-align: center;
   padding-bottom: .1em; }
 
 .calendar-today-date-label {
-  color: #cccccc;
+  color: white;
   font-size: 1.1em;
   font-weight: bold;
   text-align: center; }
@@ -842,26 +867,28 @@ StScrollBar StButton#vhandle:hover {
 .calendar-day-base {
   font-size: 1em;
   text-align: center;
+  align-items: center;
   width: 2.4em;
   height: 2.4em; }
-
-.calendar-day-base:hover {
-  background-color: #777777;
-  color: #fff; }
+  .calendar-day-base:hover {
+    background-color: #79B94D;
+    color: #fff; }
 
 .calendar-day-heading {
-  color: #cccccc;
+  color: black;
   padding-top: 1em; }
 
 .calendar-week-number {
-  color: #cccccc;
+  color: black;
   font-weight: bold;
-  font-size: 0.85em; }
+  font-size: 1em;
+  align-items: center;
+  align-self: center;
+  align-content: center; }
 
 /* Hack used in lieu of border-collapse - see calendar.js */
 .calendar-day {
-  border: 1px solid #5a5a5a;
-  color: #cccccc;
+  color: black;
   border-top-width: 0;
   border-left-width: 0; }
 
@@ -878,20 +905,21 @@ StScrollBar StButton#vhandle:hover {
   text-shadow: black 0px 2px 2px;
   color: #ffffff;
   background-gradient-direction: vertical;
-  background-gradient-start: #282828;
-  background-gradient-end: #3c3c3c;
+  background-gradient-start: #B5E089;
+  background-gradient-end: #79B94D;
   box-shadow: inset 0px 0px 0px 1px #787878; }
-
-.calendar-today:selected {
-  font-weight: bold; }
+  .calendar-today:selected {
+    font-weight: bold; }
 
 .calendar-other-month-day {
   color: #888888; }
 
 .calendar-not-today:selected {
-  background-color: #777777;
+  background-color: #B5E089;
   color: #fff;
   font-weight: bold; }
+  .calendar-not-today:selected:hover {
+    background-color: #79B94D; }
 
     /* ===================================================================
 * Notifications
