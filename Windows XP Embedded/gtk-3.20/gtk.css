@@ -700,7 +700,7 @@ list {
 .frame, frame > border {
   border-width: 2px;
   border-style: groove;
-  border-color: #d4d0d7;
+  border-color: #b5b4b8;
   border-radius: 0;
   box-shadow: none;
   background: none; }
@@ -1892,7 +1892,7 @@ headerbar {
     font-weight: bold;
     color: white;
     padding: 0 12px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); }
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4); }
     headerbar .title:backdrop {
       text-shadow: none;
       color: white; }
@@ -1916,15 +1916,14 @@ headerbar {
   headerbar .image-button:checked:disabled {
     background-color: transparent;
     border-style: none;
-    background-size: 21px 21px;
     background-position: center;
+    min-width: 22px;
+    min-height: 22px;
     padding: 3px 2px 2px 3px;
     margin: 3px 0px 0px -4px;
     background-repeat: no-repeat;
     outline-color: transparent; }
   headerbar .image-button {
-    min-width: 21px;
-    min-height: 21px;
     background: no-repeat url("assets/button-bg-normal.png") 100% 100%;
     background-position: center;
     box-shadow: none; }
@@ -2734,7 +2733,7 @@ decoration {
     border-style: solid;
     border-width: 1px;
     outline-width: 0px;
-    border-color: #aca899; }
+    border-color: #b5b4b8; }
   decoration tooltip.csd, tooltip decoration {
     border-color: #000000; }
 
