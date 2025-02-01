@@ -29,8 +29,6 @@
 
 *:disabled {
   -gtk-icon-effect: dim; }
-*:hover {
-  -gtk-icon-effect: highlight; }
 
 .gtkstyle-fallback {
   color: #000000;
@@ -624,7 +622,7 @@ calendar {
     color: #5B83BD; }
 
 entry {
-  padding: 6px 5px;
+  padding: 4px;
   border-width: 1px;
   border-style: solid;
   border-color: #7f9db9;
@@ -1385,7 +1383,7 @@ levelbar block {
 scale {
   min-height: 10px;
   min-width: 10px;
-  padding: 12px; }
+  padding: 0 12px 0 12px; }
   scale fill, scale highlight {
     margin: -1px; }
   scale trough, scale fill {
@@ -1746,10 +1744,10 @@ spinner {
       opacity: 0.5; }
 
 statusbar {
-  padding: 4px;
+  padding: 0 4px 0 4px;
   color: #000000; }
-  statusbar frame > border {
-    border: none; }
+  statusbar frame {
+    border: 2px groove #a7a6aa; }
 
 switch {
   font-size: 0;
@@ -1862,7 +1860,24 @@ headerbar {
   border-radius: 6px 6px 0 0;
   background-color: #EBE9ED;
   background-size: 1px 100%;
-  background-image: url("assets/titlebar-focused-middle.png"); }
+  background-image: url("assets/titlebar-focused-middle.png");
+    /*& button, 
+    & button.flat {
+      //@include headerbar_buttons($headerbar_bg_color, $headerbar_fg_color, $borders);
+      padding: 0px;
+      margin: 2px;
+      min-height: 6px;
+      min-width: 6px;
+      border: 1px solid #4B8A36;
+      border-radius: 2px;
+      background-image: linear-gradient(to bottom, #A4D07B, #68A941);
+
+      &:hover {
+        background-image: linear-gradient(to bottom, #B5E089, #79B94D);
+        border: 1px solid #5CA242;
+      }
+
+    }*/ }
   headerbar:backdrop {
     color: #000000;
     background-color: #EBE9ED;
@@ -1901,19 +1916,7 @@ headerbar {
     padding-left: 12px;
     padding-right: 12px;
     color: rgba(255, 255, 255, 0.7); }
-  headerbar button {
-    padding: 0px; }
-  headerbar entry {
-    padding: 6px 8px; }
-  headerbar .image-button,
-  headerbar .image-button:hover,
-  headerbar .image-button:active,
-  headerbar .image-button:backdrop,
-  headerbar .image-button:backdrop:hover
-  .image-button:disabled,
-  headerbar .image-button:checked,
-  headerbar .image-button:active:disabled,
-  headerbar .image-button:checked:disabled {
+  headerbar .image-button, headerbar .image-button:hover, headerbar .image-button:active, headerbar .image-button:backdrop, headerbar .image-button:backdrop:hover, headerbar .image-button:disabled, headerbar .image-button:checked, headerbar .image-button:active:disabled, headerbar .image-button:checked:disabled {
     background-color: transparent;
     border-style: none;
     background-position: center;

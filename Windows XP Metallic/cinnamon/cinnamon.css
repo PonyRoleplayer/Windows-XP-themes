@@ -224,49 +224,91 @@ StScrollBar StButton#vhandle:hover {
  * Panel (panel.js)
  * ===================================================================*/
 #panel {
-  color: black;
-  background-color: #013c6b;
-  font-size: 9pt;
-  border-image: url("assets/panel.png") 80 0 0 0;
-  font-weight: normal;
-  height: 30px; }
+  color: black; }
+  #panel.panel-top {
+    background-repeat: repeat;
+    background-image: url("assets/panelmiddle-top.png");
+    background-size: contain; }
+  #panel.panel-right {
+    background-repeat: repeat;
+    background-image: url("assets/panelmiddle-right.png");
+    background-size: contain; }
+  #panel.panel-bottom {
+    background-repeat: repeat;
+    background-image: url("assets/panelmiddle-bottom.png");
+    background-size: contain; }
+  #panel.panel-left {
+    background-repeat: repeat;
+    background-image: url("assets/panelmiddle-left.png");
+    background-size: contain; }
 
 #panelLeft {
   color: white;
-  spacing: 4px; }
+  /*
+  * Ideally, I'd use background-image for this.
+  * However, it doesn't work because background-size is bugged and 100% 100% doesn't work
+  */
+  /*
+  * For some reason, borders don't stretch properly when the panel is below 41px
+  */ }
   #panelLeft:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255, 0, 0, 0.05);
     background-gradient-end: rgba(255, 0, 0, 0.4); }
-  #panelLeft:ltr {
-    padding-right: 4px; }
-  #panelLeft:rtl {
-    padding-left: 4px; }
-  #panelLeft .applet-box:first-child:hover {
-    border-image: url("assets/menu-hover.png") 7 0 0 0; }
-  #panelLeft .applet-box:first-child:active {
-    border-image: url("assets/menu-active.png") 7 0 0 0; }
+  *.panel-top #panelLeft .applet-box:first-child {
+    border-image: url("assets/panelmenu-top-box.png") 7 0 0 0;
+    padding-left: 8px;
+    min-width: 90px; }
+    *.panel-top #panelLeft .applet-box:first-child:hover {
+      border-image: url("assets/panelmenu-top-hover.png") 7 0 0 0; }
+    *.panel-top #panelLeft .applet-box:first-child:active {
+      border-image: url("assets/panelmenu-top-active.png") 7 0 0 0; }
+  *.panel-right #panelLeft .applet-box:first-child {
+    border-image: url("assets/panelmenu-right-box.png") 7 0 0 0;
+    padding: 8px 0 8px 0; }
+    *.panel-right #panelLeft .applet-box:first-child:hover {
+      border-image: url("assets/panelmenu-right-hover.png") 7 0 0 0; }
+    *.panel-right #panelLeft .applet-box:first-child:active {
+      border-image: url("assets/panelmenu-right-active.png") 7 0 0 0; }
+  *.panel-bottom #panelLeft .applet-box:first-child {
+    border-image: url("assets/panelmenu-bottom-box.png") 7 0 0 0;
+    padding-left: 8px;
+    min-width: 90px; }
+    *.panel-bottom #panelLeft .applet-box:first-child:hover {
+      border-image: url("assets/panelmenu-bottom-hover.png") 7 0 0 0; }
+    *.panel-bottom #panelLeft .applet-box:first-child:active {
+      border-image: url("assets/panelmenu-bottom-active.png") 7 0 0 0; }
+  *.panel-left #panelLeft .applet-box:first-child {
+    border-image: url("assets/panelmenu-left-box.png") 0 0 1 0;
+    padding: 8px 0 8px 0; }
+    *.panel-left #panelLeft .applet-box:first-child:hover {
+      border-image: url("assets/panelmenu-left-hover.png") 0 0 1 0; }
+    *.panel-left #panelLeft .applet-box:first-child:active {
+      border-image: url("assets/panelmenu-left-active.png") 0 0 1 0; }
   #panelLeft .applet-box:first-child {
-    border-image: url("assets/menu-box.png") 7 0 0 0;
-    border-right-width: 10px;
     text-shadow: black 0px 1px 1px;
     font-size: 12pt;
     font-style: italic;
     font-weight: bold;
-    font-family: tahoma;
-    padding-right: 15px; }
+    font-family: tahoma; }
 
 #panelCenter {
-  color: white;
-  spacing: 4px; }
+  color: white; }
   #panelCenter:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0, 255, 0, 0.05);
     background-gradient-end: rgba(0, 255, 0, 0.4); }
 
 #panelRight {
-  color: white;
-  border-image: url("assets/panel-right.png") 7 0 0 0; }
+  color: white; }
+  *.panel-top #panelRight {
+    border-image: url("assets/panelend-top.png") 30 0 0 0; }
+  *.panel-right #panelRight {
+    border-image: url("assets/panelend-right.png") 0 0 30 0; }
+  *.panel-bottom #panelRight {
+    border-image: url("assets/panelend-bottom.png") 30 0 0 0; }
+  *.panel-left #panelRight {
+    border-image: url("assets/panelend-left.png") 0 0 30 0; }
   #panelRight:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0, 0, 255, 0.05);
@@ -332,10 +374,6 @@ StScrollBar StButton#vhandle:hover {
 /* ===================================================================
  * Panel Launchers Applet (panelLaunchers.js)
  * ===================================================================*/
-.panel-launcher {
-  margin: 1px;
-  padding: 3px; }
-
 .panel-launcher:hover {
   background-color: rgba(0, 0, 0, 0.5); }
 
@@ -502,12 +540,11 @@ StScrollBar StButton#vhandle:hover {
   color: #eee; }
 
 .desklet-with-borders {
-  border: 1px solid #444;
-  border-bottom: 0px;
-  border-left: 0px;
-  border-right: 0px;
-  background-color: #232323;
-  border-radius: 0px;
+  border: 1px solid #FFF;
+  background-gradient-direction: vertical;
+  background-gradient-start: #1d4d9c;
+  background-gradient-end: #5c89c9;
+  border-radius: 6px;
   color: #eee; }
 
 .desklet-with-borders-and-header {
@@ -1294,31 +1331,61 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   color: #000; }
 
 /* Context menu (at the moment only for favorites) */
-    /* ===================================================================
+  /* ===================================================================
 * Window list (windowList.js)
 * ===================================================================*/
-.window-list-box {
-  spacing: 1px;
-  padding-top: 1px; }
-
 .window-list-item-label {
   font-weight: normal;
   width: 15em;
   min-width: 5px; }
 
 .window-list-item-box {
-  border-image: url("assets/normal.png");
-  padding: 1px;
   transition-duration: 100; }
-  .window-list-item-box:active, .window-list-item-box:checked, .window-list-item-box:focus {
-    border-image: url("assets/active.png"); }
-  .window-list-item-box:hover {
-    border-image: url("assets/hover.png"); }
-  .window-list-item-box:focus:hover {
-    border-image: url("assets/active-hover.png"); }
+  *.panel-top .window-list-item-box {
+    border-image: url("assets/item-box-top-normal.png"); }
+  *.panel-bottom .window-list-item-box {
+    border-image: url("assets/item-box-bottom-normal.png"); }
+  *.panel-left .window-list-item-box {
+    border-image: url("assets/item-box-left-normal.png"); }
+  *.panel-right .window-list-item-box {
+    border-image: url("assets/item-box-right-normal.png"); }
+  *.panel-top .window-list-item-box:active, *.panel-top .window-list-item-box:checked, *.panel-top .window-list-item-box:focus {
+    border-image: url("assets/item-box-top-active.png"); }
+  *.panel-bottom .window-list-item-box:active, *.panel-bottom .window-list-item-box:checked, *.panel-bottom .window-list-item-box:focus {
+    border-image: url("assets/item-box-bottom-active.png"); }
+  *.panel-left .window-list-item-box:active, *.panel-left .window-list-item-box:checked, *.panel-left .window-list-item-box:focus {
+    border-image: url("assets/item-box-left-active.png"); }
+  *.panel-right .window-list-item-box:active, *.panel-right .window-list-item-box:checked, *.panel-right .window-list-item-box:focus {
+    border-image: url("assets/item-box-right-active.png"); }
+  *.panel-top .window-list-item-box:hover {
+    border-image: url("assets/item-box-top-hover.png"); }
+  *.panel-bottom .window-list-item-box:hover {
+    border-image: url("assets/item-box-bottom-hover.png"); }
+  *.panel-left .window-list-item-box:hover {
+    border-image: url("assets/item-box-left-hover.png"); }
+  *.panel-right .window-list-item-box:hover {
+    border-image: url("assets/item-box-right-hover.png"); }
+  *.panel-top .window-list-item-box:focus:hover {
+    border-image: url("assets/item-box-top-active-hover.png"); }
+  *.panel-bottom .window-list-item-box:focus:hover {
+    border-image: url("assets/item-box-bottom-active-hover.png"); }
+  *.panel-left .window-list-item-box:focus:hover {
+    border-image: url("assets/item-box-left-active-hover.png"); }
+  *.panel-right .window-list-item-box:focus:hover {
+    border-image: url("assets/item-box-right-active-hover.png"); }
 
-.window-list-item-demands-attention {
-  border-image: url("assets/urgent.png"); }
+*.panel-top .window-list-item-demands-attention {
+  border-image: url("assets/item-box-top-urgent.png"); }
+*.panel-bottom .window-list-item-demands-attention {
+  border-image: url("assets/item-box-bottom-urgent.png"); }
+*.panel-left .window-list-item-demands-attention {
+  border-image: url("assets/item-box-left-urgent.png"); }
+*.panel-right .window-list-item-demands-attention {
+  border-image: url("assets/item-box-right-urgent.png"); }
+
+.grouped-window-list-box {
+  padding: 0px;
+  margin: 0px; }
 
 /* https://github.com/B00merang-Project/Windows-XP/issues/44 */
 .grouped-window-list-thumbnail-menu {
@@ -1336,30 +1403,78 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   color: black;
   /*min-width: 160px;*/ }
   .grouped-window-list-item-box:hover {
-    border-image: url("assets/hover.png") 4;
     transition-duration: 100; }
+    *.panel-top .grouped-window-list-item-box:hover {
+      border-image: url("assets/item-box-top-hover.png"); }
+    *.panel-bottom .grouped-window-list-item-box:hover {
+      border-image: url("assets/item-box-bottom-hover.png"); }
+    *.panel-left .grouped-window-list-item-box:hover {
+      border-image: url("assets/item-box-left-hover.png"); }
+    *.panel-right .grouped-window-list-item-box:hover {
+      border-image: url("assets/item-box-right-hover.png"); }
   .grouped-window-list-item-box:active, .grouped-window-list-item-box:checked {
-    border-image: url("assets/normal.png") 4;
     transition-duration: 100; }
+    *.panel-top .grouped-window-list-item-box:active, *.panel-top .grouped-window-list-item-box:checked {
+      border-image: url("assets/item-box-top-normal.png"); }
+    *.panel-bottom .grouped-window-list-item-box:active, *.panel-bottom .grouped-window-list-item-box:checked {
+      border-image: url("assets/item-box-bottom-normal.png"); }
+    *.panel-left .grouped-window-list-item-box:active, *.panel-left .grouped-window-list-item-box:checked {
+      border-image: url("assets/item-box-left-normal.png"); }
+    *.panel-right .grouped-window-list-item-box:active, *.panel-right .grouped-window-list-item-box:checked {
+      border-image: url("assets/item-box-right-normal.png"); }
   .grouped-window-list-item-box:active:hover, .grouped-window-list-item-box:checked:hover {
-    border-image: url("assets/hover.png") 8;
     transition-duration: 100; }
+    *.panel-top .grouped-window-list-item-box:active:hover, *.panel-top .grouped-window-list-item-box:checked:hover {
+      border-image: url("assets/item-box-top-hover.png"); }
+    *.panel-bottom .grouped-window-list-item-box:active:hover, *.panel-bottom .grouped-window-list-item-box:checked:hover {
+      border-image: url("assets/item-box-bottom-hover.png"); }
+    *.panel-left .grouped-window-list-item-box:active:hover, *.panel-left .grouped-window-list-item-box:checked:hover {
+      border-image: url("assets/item-box-left-hover.png"); }
+    *.panel-right .grouped-window-list-item-box:active:hover, *.panel-right .grouped-window-list-item-box:checked:hover {
+      border-image: url("assets/item-box-right-hover.png"); }
   .grouped-window-list-item-box:focus {
-    border-image: url("assets/active.png") 8;
     transition-duration: 100;
     color: white; }
+    *.panel-top .grouped-window-list-item-box:focus {
+      border-image: url("assets/item-box-top-active.png"); }
+    *.panel-bottom .grouped-window-list-item-box:focus {
+      border-image: url("assets/item-box-bottom-active.png"); }
+    *.panel-left .grouped-window-list-item-box:focus {
+      border-image: url("assets/item-box-left-active.png"); }
+    *.panel-right .grouped-window-list-item-box:focus {
+      border-image: url("assets/item-box-right-active.png"); }
   .grouped-window-list-item-box:focus:hover {
-    border-image: url("assets/active-hover.png") 8;
     transition-duration: 100;
     color: white; }
+    *.panel-top .grouped-window-list-item-box:focus:hover {
+      border-image: url("assets/item-box-top-hover.png"); }
+    *.panel-bottom .grouped-window-list-item-box:focus:hover {
+      border-image: url("assets/item-box-bottom-hover.png"); }
+    *.panel-left .grouped-window-list-item-box:focus:hover {
+      border-image: url("assets/item-box-left-hover.png"); }
+    *.panel-right .grouped-window-list-item-box:focus:hover {
+      border-image: url("assets/item-box-right-hover.png"); }
 
 .grouped-window-list-item-demands-attention {
   font-weight: normal;
-  border-image: url("assets/urgent.png") 4;
   transition-duration: 100; }
+  *.panel-top .grouped-window-list-item-demands-attention {
+    border-image: url("assets/item-box-top-urgent.png"); }
+  *.panel-bottom .grouped-window-list-item-demands-attention {
+    border-image: url("assets/item-box-bottom-urgent.png"); }
+  *.panel-left .grouped-window-list-item-demands-attention {
+    border-image: url("assets/item-box-left-urgent.png"); }
+  *.panel-right .grouped-window-list-item-demands-attention {
+    border-image: url("assets/item-box-right-urgent.png"); }
 
-.grouped-window-list-item-attention:hover {
-  border-image: url("assets/urgent.png") 4; }
+*.panel-top .grouped-window-list-item-attention:hover {
+  border-image: url("assets/item-box-top-urgent.png"); }
+*.panel-bottom .grouped-window-list-item-attention:hover {
+  border-image: url("assets/item-box-bottom-urgent.png"); }
+*.panel-left .grouped-window-list-item-attention:hover {
+  border-image: url("assets/item-box-left-urgent.png"); }
+*.panel-right .grouped-window-list-item-attention:hover {
+  border-image: url("assets/item-box-right-urgent.png"); }
 
 .window-list-item-box .progress,
 .grouped-window-list-item-box .progress {
@@ -1503,19 +1618,15 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
     /* ===================================================================
 * Applets (applet.js)
 * ===================================================================*/
-.applet-separator {
-  padding: 5px 4px; }
-
 .applet-separator-line {
-  width: 1px;
   background: rgba(0, 0, 0, 0.5); }
 
-StBoxLayout.xapp-status-cinnamon-org-applet {
+*.panel-bottom .xapp-status-cinnamon-org-applet, *.panel-top .xapp-status-cinnamon-org-applet {
   padding-left: 4px; }
+*.panel-left .xapp-status-cinnamon-org-applet, *.panel-right .xapp-status-cinnamon-org-applet {
+  padding-top: 4px; }
 
 .applet-box {
-  padding-left: 1px;
-  padding-right: 1px;
   transition-duration: 300; }
 
 .applet-box:hover {
@@ -1535,9 +1646,6 @@ StBoxLayout.xapp-status-cinnamon-org-applet {
 .applet-label:hover,
 .applet-box:hover > .applet-label {
   color: white; }
-
-.applet-icon {
-  icon-size: 1.3em; }
 
    /* ===================================================================
 * OSD Popups
@@ -1800,8 +1908,7 @@ The colour parameters are red, green, blue, and transparency or a name */
   border-radius: 8px 0px 0px 0px; }
 
 .menu-cinnamon-org-applet {
-  color: white;
-  padding-left: 8px; }
+  color: white; }
 
 /* ===================================================================
 * Snap/Tile OSD Popup
