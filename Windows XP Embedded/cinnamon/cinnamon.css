@@ -122,13 +122,17 @@ StScrollBar StButton#vhandle:hover {
   box-shadow: 8px 8px 2px -5px rgba(50,50,45,0.50);
 }*/
 .menu {
-  margin: 5px; }
+  margin: 8px; }
 
-.popup-submenu-menu-item:open {
-  background-color: #68A941; }
+.popup-submenu-menu-item {
+  padding: .4em 1.75em;
+  margin: 0px 6px 0px 6px; }
+  .popup-submenu-menu-item:open {
+    color: white;
+    background-color: #3e9de8; }
 
 .popup-sub-menu {
-  background-color: #A4D07B; }
+  margin: 0px 6px 0px 6px; }
   .popup-sub-menu .popup-menu-item:ltr {
     padding-right: 0em; }
   .popup-sub-menu .popup-menu-item:rtl {
@@ -147,23 +151,22 @@ StScrollBar StButton#vhandle:hover {
 .popup-menu-content {
   padding: 1em 0;
   border-style: solid;
-  border-width: 1px;
-  border-color: #FFF;
+  border-width: 2px;
+  border-color: #0e558d;
   border-radius: 6px;
-  background-gradient-direction: vertical;
-  background-gradient-start: #1d649c;
-  background-gradient-end: #054c84; }
+  background-color: #2e75ad;
+  box-shadow: 0px 2px 6px 4px rgba(0, 0, 0, 0.6);
+  color: white; }
 
 .popup-menu-item {
   padding: .4em 1.75em;
-  color: #FFF; }
+  margin: 0px 6px 0px 6px;
+  color: white; }
   .popup-menu-item:active {
-    background-color: #1466c9;
-    color: white; }
+    background-color: #1466c9; }
   .popup-menu-item:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: #A4D07B;
-    background-gradient-end: #68A941; }
+    background-color: #3e9de8;
+    color: white; }
   .popup-menu-item:insensitive {
     color: #9f9f9f; }
 
@@ -171,7 +174,7 @@ StScrollBar StButton#vhandle:hover {
   spacing: 1em; }
 
 .popup-separator-menu-item {
-  background-color: white;
+  background-color: #0e558d;
   height: 1px; }
 
 .popup-alternating-menu-item:alternate {
@@ -193,7 +196,7 @@ StScrollBar StButton#vhandle:hover {
 
 .popup-inactive-menu-item {
   font-weight: bold;
-  color: #FFF; }
+  color: white; }
 
 .popup-subtitle-menu-item {
   font-weight: bold; }
@@ -1216,7 +1219,8 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
     border-top-width: 67px;
     border-right-width: 2px;
     border-bottom-width: 42px;
-    border-left-width: 2px; }
+    border-left-width: 2px;
+    box-shadow: 8px 8px 2px -5px rgba(50, 50, 45, 0.5); }
 
 .menu-favorites-box {
   margin: 0;
@@ -1535,49 +1539,41 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
 /* ===================================================================
 * Sound applet (sound@cinnamon.org/applet.js)
 * ===================================================================*/
-.sound-player StButton {
-  width: 22px;
-  height: 22px;
-  padding: 5px;
-  color: white; }
-  .sound-player StButton:small {
-    border: 1px solid transparent;
-    border-radius: 3px;
-    width: 16px;
-    height: 16px;
-    color: #c8c8c8; }
-    .sound-player StButton:small:hover {
-      color: white;
-      border-image: url("button-assets/button-hover.png") 4; }
-    .sound-player StButton:small:active {
-      color: white;
-      border-image: url("button-assets/button-pressed.png") 4; }
-  .sound-player StButton:hover, .sound-player StButton:active {
-    color: #fff; }
-.sound-player .slider {
-  height: 0.5em;
-  -slider-height: 0.5em;
-  -slider-background-color: #7a7a7a;
-  -slider-border-color: rgba(0, 0, 0, 0);
-  -slider-active-background-color: #ffffff;
-  -slider-active-border-color: rgba(0, 0, 0, 0);
-  -slider-border-width: 0px;
-  -slider-handle-radius: 0px; }
-.sound-player StBoxLayout {
-  spacing: 0.5em;
-  color: white;
-  font-weight: bold; }
-.sound-player > StBoxLayout {
-  padding: 0 16px 8px; }
+.sound-player {
+  /*& StBoxLayout {
+    spacing: 0.5em;
+    color: white;
+    font-weight: bold;
+  }
+  
+  & > StBoxLayout {
+    padding: 0 16px 8px;
+  }*/ }
+  .sound-player StButton {
+    width: 22px;
+    height: 22px;
+    padding: 5px; }
+    .sound-player StButton:small {
+      border: 1px solid transparent;
+      border-radius: 3px;
+      width: 16px;
+      height: 16px; }
+  .sound-player .slider {
+    height: 0.5em;
+    -slider-height: 0.5em;
+    -slider-background-color: #7a7a7a;
+    -slider-border-color: rgba(0, 0, 0, 0);
+    -slider-active-background-color: #ffffff;
+    -slider-active-border-color: rgba(0, 0, 0, 0);
+    -slider-border-width: 0px;
+    -slider-handle-radius: 0px; }
 
 .sound-player-overlay {
   width: 300px;
   padding: 15px;
   spacing: 0.5em;
-  background-gradient-direction: vertical;
-  background-gradient-start: #A4D07B;
-  background-gradient-end: #68A941;
-  color: #FFF; }
+  background-color: #013c6b;
+  color: white; }
 
 .sound-player-overlay StBoxLayout {
   padding-top: 2px; }
@@ -1622,7 +1618,7 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
 #overview-corner:hover {
   background-image: url("assets/overview-hover.png"); }
 
-    /* ===================================================================
+/* ===================================================================
 * Applets (applet.js)
 * ===================================================================*/
 .applet-separator-line {
@@ -1634,7 +1630,7 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
   padding-top: 4px; }
 
 .applet-box {
-  transition-duration: 300; }
+  color: white; }
   *.panel-bottom .applet-box, *.panel-top .applet-box {
     padding-left: 1px;
     padding-right: 1px; }
@@ -1642,23 +1638,18 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
     padding-top: 1px;
     padding-bottom: 1px; }
 
-.applet-box:hover {
-  background-color: rgba(25, 25, 25, 0.2);
-  color: white;
-  transition-duration: 100; }
-
-.applet-box:active {
-  background-color: rgba(25, 25, 25, 0.4);
-  color: white;
-  transition-duration: 100; }
-
 .applet-label:not(:first-child) {
   font-weight: normal; }
 
-.applet-label,
-.applet-label:hover,
-.applet-box:hover > .applet-label {
-  color: white; }
+.applet-cornerbar {
+  width: 4px;
+  margin: 2px; }
+  .applet-cornerbar.vertical {
+    height: 4px;
+    margin: 2px; }
+
+.applet-cornerbar-box {
+  background: none; }
 
    /* ===================================================================
 * OSD Popups
