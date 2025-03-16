@@ -810,30 +810,25 @@ StScrollBar StButton#vhandle:hover {
   font-weight: bold; }
 
 .calendar-change-month-back {
-  width: 18px;
-  height: 12px;
+  width: 22px;
+  height: 22px;
   background-image: url("assets/calendar-arrow-left.svg");
+  background-size: contain;
   border-radius: 4px;
-  border: none; }
+  border: none;
+  margin: 0 3px 0 3px; }
   .calendar-change-month-back:rtl {
     background-image: url("assets/calendar-arrow-right.svg"); }
-  .calendar-change-month-back:hover {
-    border: none; }
-  .calendar-change-month-back:active {
-    border: none; }
 
 .calendar-change-month-forward {
-  width: 18px;
-  height: 12px;
+  width: 22px;
+  height: 22px;
   background-image: url("assets/calendar-arrow-right.svg");
+  background-size: contain;
   border-radius: 4px;
-  border: none; }
+  margin: 0 3px 0 3px; }
   .calendar-change-month-forward:rtl {
     background-image: url("assets/calendar-arrow-left.svg"); }
-  .calendar-change-month-forward:hover {
-    border: none; }
-  .calendar-change-month-forward:active {
-    border: none; }
 
 .calendar-today-home-button,
 .calendar-today-home-button-enabled {
@@ -2289,3 +2284,81 @@ The colour parameters are red, green, blue, and transparency or a name */
   -arrow-base: 10px;
   -arrow-rise: 5px;
   -boxpointer-gap: 5px; }
+
+.dialog {
+  background-gradient-start: #5373bf;
+  background-gradient-end: #7a8db9;
+  background-gradient-direction: horizontal;
+  /*border-top: 45px;
+  border-bottom: 45px;
+  border-style: solid;
+  border-color: #003399;*/
+  border-style: solid;
+  border-color: transparent;
+  border-image: url("assets/dialog-bg.png") 1 1 45 43;
+  border-top-width: 45px;
+  border-bottom-width: 43px;
+  color: white;
+  padding: 6px; }
+  .dialog .dialog-button {
+    color: black;
+    padding: 3px 6px 3px 6px;
+    border: 1px solid #003c74;
+    border-radius: 3px;
+    background-color: #f6f6f2;
+    box-shadow: inset -3px -3px 2px #d6d0c5;
+    /*background-gradient-start: #f9fdff;
+    background-gradient-end: #a6b8cf;
+    background-gradient-direction: vertical;*/ }
+    .dialog .dialog-button:destructive-action {
+      /*color: white;
+      border: 1px solid white;
+      border-radius: 3px;
+      background-color: red;*/ }
+    .dialog .dialog-button:focus {
+      box-shadow: inset 0px 0px 2px 2px #8eafe6; }
+    .dialog .dialog-button:hover {
+      box-shadow: inset 0px 0px 2px 2px #e59700; }
+    .dialog .dialog-button:active {
+      background-color: #e3e2da;
+      box-shadow: inset 2px 2px 2px #d0cbbf; }
+    .dialog .dialog-button:checked {
+      background-color: #e3e2da;
+      box-shadow: inset 2px 2px 2px #d0cbbf; }
+    .dialog .dialog-button:insensitive {
+      border: 1px solid #c9c7ba;
+      background-color: #f5f4ea;
+      box-shadow: none;
+      color: grey; }
+
+.prompt-dialog-password-entry {
+  padding: 4px 12px;
+  color: black;
+  background: white;
+  border: 1px solid grey;
+  border-radius: 0px;
+  caret-color: black;
+  caret-size: 1px;
+  width: 250px;
+  transition-duration: 300;
+  selection-background-color: blue; }
+  .prompt-dialog-password-entry:focus {
+    border: 1px solid blue; }
+  .prompt-dialog-password-entry .capslock-warning {
+    icon-size: 16px;
+    warning-color: red;
+    padding: 0 4px; }
+  .prompt-dialog-password-entry .hint-text {
+    color: grey; }
+  .prompt-dialog-password-entry .peek-password {
+    color: black;
+    icon-size: 16px; }
+
+.user-icon {
+  border-style: solid;
+  border-color: transparent;
+  border-image: url("assets/frame.png") 0 0 8 8;
+  border-top-width: 4px;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 4px; }
