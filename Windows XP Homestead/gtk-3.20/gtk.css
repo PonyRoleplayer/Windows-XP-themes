@@ -159,13 +159,12 @@ button:link, button:visited {
 
 button {
   padding: 6px;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid #575d45;
   border-radius: 2px;
   color: #000000;
-  border-color: #575d45;
   background-color: #ECE9D8;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+  box-shadow: none;
   -gtk-outline-radius: 2px; }
   button:hover {
     box-shadow: inset 0 0 1px 2px #ffc73c;
@@ -189,11 +188,13 @@ button.flat {
   border-radius: 2px;
   color: #000000;
   background-color: transparent;
-  background-image: none; }
+  background-image: none;
+  box-shadow: none; }
   button.flat:hover {
     border-color: #5b6248;
     background-color: #ECE9D8;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    box-shadow: none; }
   button.flat:active, button.flat:checked {
     border-color: #434137;
     background-color: #e4e0c9;
@@ -989,14 +990,9 @@ menubar, .menubar {
   border-style: none;
   background-color: #ECE9D8;
   color: #000000;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #d8d2bd;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #ffffff;
-  padding: 0px 2px 1px 2px;
-  box-shadow: inset 1px -0.5px 2px -1px rgba(81, 81, 77, 0.2); }
+  border-top: 1px solid white;
+  border-bottom: 1px solid #d8d2bd;
+  padding: 0px 2px 1px 2px; }
   menubar:backdrop, .menubar:backdrop {
     color: #000000;
     background-color: #ECE9D8; }
@@ -1749,7 +1745,6 @@ statusbar {
 
 switch {
   font-size: 0;
-  color: transparent;
   outline-offset: -4px;
   margin: 4px;
   border: 1px solid #575d45;
@@ -1769,7 +1764,8 @@ switch {
     border-radius: 2px;
     border-color: #575d45;
     background-color: #ECE9D8;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    box-shadow: none; }
   switch:disabled slider {
     border-color: #c8c6b7;
     background-color: #e9e6da; }
@@ -2007,9 +2003,10 @@ headerbar {
 
 toolbar {
   padding: 4px;
-  border: none;
   color: #000000;
-  background-color: #ECE9D8; }
+  background-color: #ECE9D8;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #d8d2bd; }
   toolbar:backdrop {
     color: #000000;
     background-color: #ECE9D8; }
@@ -2021,11 +2018,13 @@ toolbar {
     border-radius: 2px;
     color: #000000;
     background-color: transparent;
-    background-image: none; }
+    background-image: none;
+    box-shadow: none; }
     toolbar button.flat:hover {
       border-color: #5b6248;
       background-color: #ECE9D8;
-      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
+      background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+      box-shadow: none; }
     toolbar button.flat:active, toolbar button.flat:checked {
       border-color: #434137;
       background-color: #e4e0c9;
@@ -2036,41 +2035,6 @@ toolbar {
       background-color: transparent; }
   toolbar menubar {
     -GtkToolbar-button-relief: normal; }
-
-.primary-toolbar {
-  -GtkWidget-window-dragging: true;
-  border-width: 1px 0 2px 0;
-  border-style: groove;
-  border-color: #dbd7bb;
-  padding: 0px 2px 1px 2px;
-  box-shadow: inset 1px -0.5px 2px -1px rgba(81, 81, 77, 0.2); }
-  .primary-toolbar button, .primary-toolbar .raised button {
-    padding: 6px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 2px;
-    color: #000000;
-    border-color: #575d45;
-    background-color: #ECE9D8;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
-    -gtk-outline-radius: 2px; }
-    .primary-toolbar button:hover, .primary-toolbar .raised button:hover {
-      box-shadow: inset 0 0 1px 2px #ffc73c;
-      border-color: #5b6248; }
-    .primary-toolbar button:focus, .primary-toolbar .raised button:focus {
-      box-shadow: inset 0 0 1px 2px #6982ee; }
-    .primary-toolbar button:active, .primary-toolbar button:checked, .primary-toolbar .raised button:active, .primary-toolbar .raised button:checked {
-      border-color: shade(#dbd7bb, 0.3);
-      background-color: #e4e0c9;
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to bottom, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to top, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea); }
-      .primary-toolbar button:active:disabled, .primary-toolbar button:checked:disabled, .primary-toolbar .raised button:active:disabled, .primary-toolbar .raised button:checked:disabled {
-        color: #121210;
-        border-color: #706f67;
-        background-color: #cecab4; }
-    .primary-toolbar button:disabled, .primary-toolbar .raised button:disabled {
-      color: #76756c;
-      border-color: #b0a981;
-      background-color: #e0ddcd; }
 
 .inline-toolbar {
   padding: 1px;
@@ -2084,13 +2048,12 @@ toolbar {
     background-color: #ECE9D8; }
   .inline-toolbar toolbutton > button {
     padding: 6px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid #575d45;
     border-radius: 2px;
     color: #000000;
-    border-color: #575d45;
     background-color: #ECE9D8;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    box-shadow: none;
     -gtk-outline-radius: 2px; }
     .inline-toolbar toolbutton > button:hover {
       box-shadow: inset 0 0 1px 2px #ffc73c;
@@ -2373,14 +2336,14 @@ filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
       color: #000000;
       background-color: #d9dacd; }
     filechooser .sidebar row:selected, filechooser .sidebar row:focus:selected, filechooser .sidebar view row:selected, filechooser .sidebar view row:focus:selected, filechooser .sidebar row.sidebar-row:selected, filechooser .sidebar row.sidebar-row:focus:selected, filechooser .sidebar .view:selected, filechooser .sidebar .view:focus:selected, filechooser .sidebar iconview:selected, filechooser .sidebar iconview:focus:selected, .nautilus-window .sidebar row:selected, .nautilus-window .sidebar row:focus:selected, .nautilus-window .sidebar view row:selected, .nautilus-window .sidebar view row:focus:selected, .nautilus-window .sidebar row.sidebar-row:selected, .nautilus-window .sidebar row.sidebar-row:focus:selected, .nautilus-window .sidebar .view:selected, .nautilus-window .sidebar .view:focus:selected, .nautilus-window .sidebar iconview:selected, .nautilus-window .sidebar iconview:focus:selected, .nemo-window .sidebar row:selected, .nemo-window .sidebar row:focus:selected, .nemo-window .sidebar view row:selected, .nemo-window .sidebar view row:focus:selected, .nemo-window .sidebar row.sidebar-row:selected, .nemo-window .sidebar row.sidebar-row:focus:selected, .nemo-window .sidebar .view:selected, .nemo-window .sidebar .view:focus:selected, .nemo-window .sidebar iconview:selected, .nemo-window .sidebar iconview:focus:selected {
-      color: #FFFFFF;
-      background-color: #94B06F; }
+      color: #000000;
+      background-color: #a9a9a0; }
       filechooser .sidebar row:selected:hover, filechooser .sidebar row:focus:selected:hover, filechooser .sidebar view row:selected:hover, filechooser .sidebar view row:focus:selected:hover, filechooser .sidebar row.sidebar-row:selected:hover, filechooser .sidebar row.sidebar-row:focus:selected:hover, filechooser .sidebar .view:selected:hover, filechooser .sidebar .view:focus:selected:hover, filechooser .sidebar iconview:selected:hover, filechooser .sidebar iconview:focus:selected:hover, .nautilus-window .sidebar row:selected:hover, .nautilus-window .sidebar row:focus:selected:hover, .nautilus-window .sidebar view row:selected:hover, .nautilus-window .sidebar view row:focus:selected:hover, .nautilus-window .sidebar row.sidebar-row:selected:hover, .nautilus-window .sidebar row.sidebar-row:focus:selected:hover, .nautilus-window .sidebar .view:selected:hover, .nautilus-window .sidebar .view:focus:selected:hover, .nautilus-window .sidebar iconview:selected:hover, .nautilus-window .sidebar iconview:focus:selected:hover, .nemo-window .sidebar row:selected:hover, .nemo-window .sidebar row:focus:selected:hover, .nemo-window .sidebar view row:selected:hover, .nemo-window .sidebar view row:focus:selected:hover, .nemo-window .sidebar row.sidebar-row:selected:hover, .nemo-window .sidebar row.sidebar-row:focus:selected:hover, .nemo-window .sidebar .view:selected:hover, .nemo-window .sidebar .view:focus:selected:hover, .nemo-window .sidebar iconview:selected:hover, .nemo-window .sidebar iconview:focus:selected:hover {
-        color: #FFFFFF;
-        background-color: #a4bc85; }
+        color: #000000;
+        background-color: #9d9d94; }
       filechooser .sidebar row:selected:active, filechooser .sidebar row:focus:selected:active, filechooser .sidebar view row:selected:active, filechooser .sidebar view row:focus:selected:active, filechooser .sidebar row.sidebar-row:selected:active, filechooser .sidebar row.sidebar-row:focus:selected:active, filechooser .sidebar .view:selected:active, filechooser .sidebar .view:focus:selected:active, filechooser .sidebar iconview:selected:active, filechooser .sidebar iconview:focus:selected:active, .nautilus-window .sidebar row:selected:active, .nautilus-window .sidebar row:focus:selected:active, .nautilus-window .sidebar view row:selected:active, .nautilus-window .sidebar view row:focus:selected:active, .nautilus-window .sidebar row.sidebar-row:selected:active, .nautilus-window .sidebar row.sidebar-row:focus:selected:active, .nautilus-window .sidebar .view:selected:active, .nautilus-window .sidebar .view:focus:selected:active, .nautilus-window .sidebar iconview:selected:active, .nautilus-window .sidebar iconview:focus:selected:active, .nemo-window .sidebar row:selected:active, .nemo-window .sidebar row:focus:selected:active, .nemo-window .sidebar view row:selected:active, .nemo-window .sidebar view row:focus:selected:active, .nemo-window .sidebar row.sidebar-row:selected:active, .nemo-window .sidebar row.sidebar-row:focus:selected:active, .nemo-window .sidebar .view:selected:active, .nemo-window .sidebar .view:focus:selected:active, .nemo-window .sidebar iconview:selected:active, .nemo-window .sidebar iconview:focus:selected:active {
-        color: #FFFFFF;
-        background-color: #9fb87d; }
+        color: #000000;
+        background-color: #b5b6ab; }
   filechooser .sidebar row.expander, filechooser .sidebar view row.expander, filechooser .sidebar row.sidebar-row.expander, filechooser .sidebar .view.expander, filechooser .sidebar iconview.expander, .nautilus-window .sidebar row.expander, .nautilus-window .sidebar view row.expander, .nautilus-window .sidebar row.sidebar-row.expander, .nautilus-window .sidebar .view.expander, .nautilus-window .sidebar iconview.expander, .nemo-window .sidebar row.expander, .nemo-window .sidebar view row.expander, .nemo-window .sidebar row.sidebar-row.expander, .nemo-window .sidebar .view.expander, .nemo-window .sidebar iconview.expander {
     color: #000000; }
     filechooser .sidebar row.expander:hover, filechooser .sidebar view row.expander:hover, filechooser .sidebar row.sidebar-row.expander:hover, filechooser .sidebar .view.expander:hover, filechooser .sidebar iconview.expander:hover, .nautilus-window .sidebar row.expander:hover, .nautilus-window .sidebar view row.expander:hover, .nautilus-window .sidebar row.sidebar-row.expander:hover, .nautilus-window .sidebar .view.expander:hover, .nautilus-window .sidebar iconview.expander:hover, .nemo-window .sidebar row.expander:hover, .nemo-window .sidebar view row.expander:hover, .nemo-window .sidebar row.sidebar-row.expander:hover, .nemo-window .sidebar .view.expander:hover, .nemo-window .sidebar iconview.expander:hover {
@@ -2403,14 +2366,14 @@ filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
       color: #000000;
       background-color: #d9dacd; }
     .caja-navigation-window .caja-side-pane row:selected, .caja-navigation-window .caja-side-pane row:focus:selected, .caja-navigation-window .caja-side-pane view row:selected, .caja-navigation-window .caja-side-pane view row:focus:selected, .caja-navigation-window .caja-side-pane row.sidebar-row:selected, .caja-navigation-window .caja-side-pane row.sidebar-row:focus:selected, .caja-navigation-window .caja-side-pane .view:selected, .caja-navigation-window .caja-side-pane .view:focus:selected, .caja-navigation-window .caja-side-pane iconview:selected, .caja-navigation-window .caja-side-pane iconview:focus:selected {
-      color: #FFFFFF;
-      background-color: #94B06F; }
+      color: #000000;
+      background-color: #a9a9a0; }
       .caja-navigation-window .caja-side-pane row:selected:hover, .caja-navigation-window .caja-side-pane row:focus:selected:hover, .caja-navigation-window .caja-side-pane view row:selected:hover, .caja-navigation-window .caja-side-pane view row:focus:selected:hover, .caja-navigation-window .caja-side-pane row.sidebar-row:selected:hover, .caja-navigation-window .caja-side-pane row.sidebar-row:focus:selected:hover, .caja-navigation-window .caja-side-pane .view:selected:hover, .caja-navigation-window .caja-side-pane .view:focus:selected:hover, .caja-navigation-window .caja-side-pane iconview:selected:hover, .caja-navigation-window .caja-side-pane iconview:focus:selected:hover {
-        color: #FFFFFF;
-        background-color: #a4bc85; }
+        color: #000000;
+        background-color: #9d9d94; }
       .caja-navigation-window .caja-side-pane row:selected:active, .caja-navigation-window .caja-side-pane row:focus:selected:active, .caja-navigation-window .caja-side-pane view row:selected:active, .caja-navigation-window .caja-side-pane view row:focus:selected:active, .caja-navigation-window .caja-side-pane row.sidebar-row:selected:active, .caja-navigation-window .caja-side-pane row.sidebar-row:focus:selected:active, .caja-navigation-window .caja-side-pane .view:selected:active, .caja-navigation-window .caja-side-pane .view:focus:selected:active, .caja-navigation-window .caja-side-pane iconview:selected:active, .caja-navigation-window .caja-side-pane iconview:focus:selected:active {
-        color: #FFFFFF;
-        background-color: #9fb87d; }
+        color: #000000;
+        background-color: #b5b6ab; }
   .caja-navigation-window .caja-side-pane row.expander, .caja-navigation-window .caja-side-pane view row.expander, .caja-navigation-window .caja-side-pane row.sidebar-row.expander, .caja-navigation-window .caja-side-pane .view.expander, .caja-navigation-window .caja-side-pane iconview.expander {
     color: #000000; }
     .caja-navigation-window .caja-side-pane row.expander:hover, .caja-navigation-window .caja-side-pane view row.expander:hover, .caja-navigation-window .caja-side-pane row.sidebar-row.expander:hover, .caja-navigation-window .caja-side-pane .view.expander:hover, .caja-navigation-window .caja-side-pane iconview.expander:hover {
@@ -2966,13 +2929,12 @@ panel-toplevel.background na-tray-applet {
     font-weight: bold; }
   #XfceNotifyWindow.osd button {
     padding: 6px;
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid #575d45;
     border-radius: 2px;
     color: #000000;
-    border-color: #575d45;
     background-color: #ECE9D8;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    box-shadow: none;
     -gtk-outline-radius: 2px; }
     #XfceNotifyWindow.osd button:hover {
       box-shadow: inset 0 0 1px 2px #ffc73c;
